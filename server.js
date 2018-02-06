@@ -80,6 +80,8 @@ app.get("/api/users/:username/login", (req, res) => {
     });
 });
 
-http.createServer(app).listen(3000, () => {
-    console.log("Servidor iniciado en http://localhost:3000/");
+const port = process.env.PORT || 3000;
+
+http.createServer(app).listen(port, () => {
+    console.log(`Server started at http://localhost:${port}/`);
 });
