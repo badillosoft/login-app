@@ -1,0 +1,12 @@
+{
+    "name": "login-app",
+    "author": {
+        "name": "Alan Badillo Salas",
+        "email": "badillo.soft@hotmail.com",
+        "url": "http://badillosoft.herokuapp.com/"
+    },
+    "version": "1.0.2",
+    "dependencies": {
+        "express": "^4.16.2"
+    }
+}
