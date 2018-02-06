@@ -6,29 +6,25 @@
     </head>
     <body>
         <h1>Login App</h1>
-        <div>
+        <div id="login">
             <input id="username" type="text" placeholder="Usuario">
             <input id="password" type="password" placeholder="Contraseña">
-            <button onclick="login()">ingresar</button>
+            <button onclick="login_form()">ingresar</button>
         </div>
+        <div id="profile"></div>
+        <script src="./hotpotato.js"></script>
         <script>
-            function login() {
+            function login_form() {
                 const username = document.getElementById("username");
                 const password = document.getElementById("password");
 
-                const req = new XMLHttpRequest();
-
-                req.open("GET", "http://hotpotatoart.herokuapp.com", true);
-
-                req.onreadystatechange = () => {
-                    if (req.readyState === 4) {
-                        if (req.status === 200) {
-                            console.log(req.responseText);
-                        }
-                    }
-                };
-
-                req.send(null);
+                hot_login(username.value, password.value, user => {
+                    // TODO: Guardar el token
+                    sessionStorage.setItem("token", user.token);
+                }, err => {
+                    // Imprimir el error
+                    alert(err.message);
+                });
             }
         </script>
     </body>
