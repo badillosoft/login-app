@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(88, 41, 131);
+}
+
+.login {
+    width: 50%;
+    margin: 200px auto 0px auto;
+}
+
+.login input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 40px;
+}
+
+.login button {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(169, 86, 207);
+    border-style: solid;
+    border-color: rgb(247, 206, 255);
+}
+
+@keyframes esconder {
+    from {
+        left: 0px;
+    }
+    to {
+        left: -600px;
+    }
+}
+
+@keyframes mostrar {
+    from {
+        left: -300px;
+    }
+    to {
+        left: 0px;
+    }
+}
+
+.menu {
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 10;
+    top: 0px;
+    left: 0px;
+    background-image: url(../img/bat.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+}
+
+.menu-close {
+    animation-name: esconder;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+.menu-open {
+    animation-name: mostrar;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+
+.hide {
+    display: none;
+}
+
+.menu img {
+    width: 100px;
+    height: 100px;
+}
+
+.menu-icon {
+    font-size: 60px;
+    color: white
+}
